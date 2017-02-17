@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_confirmacion"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.hugoe.formulario.ConfirmacionActivity">
+
+    <LinearLayout
+        android:id="@+id/llNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/nombre_48" />
+
+
+        <TextView
+            android:id="@+id/tvNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margen_izq"
+            android:inputType="text"
+            android:text="@string/nombreText"
+            android:textSize="@dimen/labels" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llNacimiento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/llPaddingTop">
+
+        <ImageView
+            android:id="@+id/ivNacimiento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/calendario_48" />
+
+        <TextView
+            android:id="@+id/tvNacimiento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margen_izq"
+            android:onClick="showDatePickerDialog"
+            android:text="@string/nacimiento"
+            android:textSize="@dimen/labels" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llTelefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/llPaddingTop">
+
+        <ImageView
+            android:id="@+id/ivTelefono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/tel_fono_48" />
+
+        <TextView
+            android:id="@+id/tvTelefono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margen_izq"
+            android:onClick="showDatePickerDialog"
+            android:text="@string/telefonoText"
+            android:textSize="@dimen/labels" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/llPaddingTop">
+
+        <ImageView
+            android:id="@+id/ivEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/gmail_48" />
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margen_izq"
+            android:onClick="showDatePickerDialog"
+            android:text="@string/emailText"
+            android:textSize="@dimen/labels" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llDescripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/llPaddingTop">
+
+        <ImageView
+            android:id="@+id/ivDescripcion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/nombre_48" />
+
+        <TextView
+            android:id="@+id/tvDescripcion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margen_izq"
+            android:onClick="showDatePickerDialog"
+            android:text="@string/descripcionText"
+            android:textSize="@dimen/labels" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/miBoton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitulo"
+        android:onClick="enviarInfo"
+        android:paddingTop="@dimen/llPaddingTop"
+        android:text="@string/texto_boton2"
+        android:theme="@style/MiBotonRaised" />
+</LinearLayout>
