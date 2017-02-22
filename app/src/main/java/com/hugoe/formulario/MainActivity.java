@@ -9,18 +9,17 @@ import android.util.Log;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
 
 
-    EditText etNombre;
-    EditText etNacimiento;
-    EditText etTelefono;
-    EditText etEmail;
-    EditText etDescripcion;
+    private EditText etNombre;
+    private EditText etNacimiento;
+    private EditText etTelefono;
+    private EditText etEmail;
+    private EditText etDescripcion;
 
     private int year;
     private int month;
@@ -48,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
             etEmail = (EditText) findViewById(R.id.etEmail);
             etDescripcion = (EditText) findViewById(R.id.etDescripcion);
 
-
             etNombre.setText(nombre);
             etNacimiento.setText(cumpleaños);
             etTelefono.setText(telefono);
@@ -70,8 +68,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showDatePickerDialog(View v) {
-        // DialogFragment newFragment = new DatePickerFragment();
-        //newFragment.show(getSupportFragmentManager(), "datePicker");
         showDialog(DATE_DIALOG_ID);
     }
 
@@ -108,12 +104,10 @@ public class MainActivity extends AppCompatActivity {
             year = selectedYear;
             month = selectedMonth;
             day = selectedDay;
-
             // set selected date into textview
             etNacimiento.setText(new StringBuilder().append(day)
                     .append("-").append(month + 1).append("-").append(year)
                     .append(" "));
-
         }
     };
 
